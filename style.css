@@ -1,0 +1,118 @@
+*{
+  box-sizing: border-box;
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark{
+  --primary-color: #333;
+  --secondary-color: #fff;
+  --secondary-color-output:rgb(225,225,225,0.75);
+}
+html.light{
+  --primary-color: #fff;
+  --secondary-color: #333;
+  --secondary-color-output:rgb(0,0,0,0.75);
+}
+html.light {
+  background-color:var(--primary-color);
+  color:  var(--secondary-color);
+}
+html.dark{
+  background-color:var(--primary-color);
+  color:var(--secondary-color)
+}
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.calculator-grid{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 80vh;
+  grid-template-columns: repeat(4,100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.calculator-grid>.button{
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid var(--secondary-color);
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: all 0.5s ease-in;
+}
+.span-two{
+  grid-column: span 2;
+}
+.output {
+  grid-column: 1 / -1;
+  background-color: rgb(117, 117, 226);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  transition: all 0.5s ease-in;
+}
+.button-operation{
+  color: rgb(52, 52, 253);
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid var(--secondary-color);
+  outline: none;
+  background-color: var(--primary-color);
+  transition: all 0.5s ease-in;
+}
+
+.container .content {
+  text-align: justify;height: 20px;
+}
+
+#check{
+  display: none;
+}
+
+.btn {
+  align-self: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 120px;
+  height: 60px;
+  background-color: black;
+  transition: all 1s ease;
+
+  border-radius: 30px;
+  cursor: pointer;
+}
+.box .ball {
+  width: 60px;
+  height: 60px;
+  background-color: grey;
+  transition: all 1s ease;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+.box .scenary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 1s ease;
+  padding: 5px 10px 0px 10px;
+}
+.box .scenary svg {
+  width: 40px;
+}
