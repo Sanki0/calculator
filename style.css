@@ -89,8 +89,8 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 120px;
-  height: 60px;
+  width: 90px;
+  height: 45px;
   background-color: black;
   transition: all 1s ease;
 
@@ -98,8 +98,8 @@ header{
   cursor: pointer;
 }
 .box .ball {
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   background-color: grey;
   transition: all 1s ease;
   position: absolute;
@@ -113,6 +113,13 @@ header{
   transition: all 1s ease;
   padding: 5px 10px 0px 10px;
 }
-.box .scenary svg {
-  width: 40px;
+
+.moon img{
+  height: 30px;
+  width: 30px;
+}
+
+.sun img{
+  height: 30px;
+  width: 30px;
 }
